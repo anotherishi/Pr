@@ -6,7 +6,7 @@ const server = http.createServer(function (req, res) {
   res.end(); 
 });
 
-const wss = new WebSocketServer({ server });
+const wss = new ws.WebSocketServer({ server });
 
 wss.on("connection", function connection(ws) {
   ws.on("message", function message(data) {
